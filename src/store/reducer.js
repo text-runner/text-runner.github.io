@@ -50,7 +50,7 @@ export default function reducer(state = initialState, action) {
             const symbols = stateCopy.inputs.empty
 
             let typed = stateCopy.inputs.inputValue.split("")[stateCopy.text.currentSymbol]
-            if(typed === undefined) {
+            if(!typed) {
                 stateCopy.text.currentSymbol--
                 if(stateCopy.checks.isMistake) {
                     stateCopy.checks.isMistake = false
